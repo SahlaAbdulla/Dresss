@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="bg-gray-100 min-h-screen flex items-center justify-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://img.freepik.com/premium-photo/clothes-shopping-store-fashion-sale-shopping_926154-529.jpg" alt=""
+                class="w-full h-full object-cover filter blur-lg brightness-50">
+        </div>
+    
+        <!-- Login Form -->
+        <div class="relative z-10 bg-white p-8 rounded-md shadow-lg">
+            <h1 class="text-xl font-bold mb-4">Login</h1>
+            <form action="#" method="POST">
+                {%csrf_token%}
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="username">Username</label>
+                    <input 
+                        name="username"
+                        class="appearance-none border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
+                        id="username" type="text" placeholder="username">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="password">Password</label>
+                    <input
+                        name="password"
+                        class="appearance-none border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
+                        id="password" type="password" placeholder="Password">
+                </div>
+                <div class="flex items-center justify-between gap-8">
+                    <button type="submit" class="py-2 px-4 max-w-md  flex justify-center items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                        
+                        Sign In
+                      </button>
+                    </div>
+                    <div class="flex justify-center items-center mt-4">
+                        <p class="inline-flex items-center text-gray-700 font-medium text-xs text-center">
+                            <span class="ml-2">You don't have an account?<a href="{%url 'signup'%}" class="text-xs ml-2 text-blue-500 font-semibold">Register now &rarr;</a>
+                            </span>
+                        </p>
+                    </div>
+                
+            </form>
+        </div>
+    </div>
+    
+
+
+
+    
+</body>
+</html>
