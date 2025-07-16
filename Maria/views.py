@@ -42,48 +42,9 @@ class SignUpView(View):
          user_inst.save()
         login(request, user_inst)  # ✅ log them in directly
         return redirect("index")   # ✅ go to index
-
-
-
-            
-
-        
-# class OtpVerifyView(View):
-
-#    template_name='otp.html'
-
-#    form_class=OtpVerifyForm
-
-#    def get(self,request,args,*kwargs):
-
-#         form_instance=self.form_class()
-
-#         return render(request,self.template_name,{'form':form_instance})     
     
-#    def post(self,request,args,*kwargs):  
-       
-#        otp=request.POST.get("otp")
+    
 
-    #    try:   
-
-       
-    #      user_object=User.objects.get(otp=otp)
-
-    #      user_object.is_active=True
-
-    #      user_object.is_verified=True
-
-    #      user_object.otp=None
-
-    #      user_object.save()
-
-    #      return redirect("login")
-
-    #    except:  
-
-    #       return redirect("otp")     
-
-# views.py
 from django.contrib.auth import authenticate, login
 
 class SignInView(View):
